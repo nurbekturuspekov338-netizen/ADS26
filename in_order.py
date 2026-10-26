@@ -11,3 +11,4 @@ def in_order(root):
     in_order(root.left)       
     print(root.val, end=" ") 
     in_order(root.right)
+    
