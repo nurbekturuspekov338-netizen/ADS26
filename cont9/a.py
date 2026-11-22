@@ -1,24 +1,18 @@
 import sys
-
-
-def pl(s: str):
-    j = 0
-    i = 1
-    n = len(s)
-    p = [0] * n
-    while i < n:
-        if s[j] == s[i]:
-            p[i] = j + 1
-            i += 1
-            j += 1
+def pl(s):
+    j=0; i=1; n=len(s); p=[0]*n
+    while i<n:
+        if s[j]==s[i]:
+            p[i]=j+1
+            i+=1
+            j+=1
         else:
-            if j == 0:
-                p[i] = 0
-                i += 1
+            if j==0:
+                p[i]=0
+                i+=1
             else:
-                j = p[j - 1]
+                j=p[j-1]
     return p
-
 
 def contains(pat: str, text: str, p: list) -> bool:
     i = 0
